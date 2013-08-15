@@ -1,3 +1,2 @@
-#Angular Product Generator
-=========================
-
+#Angular Product Generator#
+==========================

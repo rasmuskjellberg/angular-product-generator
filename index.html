@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>My app</title>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style>
+		body 
+		{
+			width: 100%;
+			height: 100%;
+			padding-top: 60px;
+		}
+
+		#generator {
+			display: block;
+			width: 600px;
+		} #generator img {
+			display: block;
+			position: absolute;
+			width: 600px;
+		}
+	</style>
+	<script>
+		function generator ( $scope )
+		{
+			$scope.chassie 		= "images/chassie_black.png";
+			$scope.light 		= "images/light_yellow.png";
+			$scope.driver 		= "images/driver_1.png";
+			$scope.front 		= "images/window_light.png";
+		}
+	</script>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="row" ng-controller="generator">
+			
+		<div class="span3">
+
+				<label for="gen_input_chassie">Choose chassie</label>
+				<select name="gen_input_chassie" ng-model="chassie">
+					<option value="images/chassie_blue.png">Business blue</option>
+					<option value="images/chassie_red.png">Business red</option>
+					<option value="images/chassie_yellow.png">Business yellow</option>
+					<option value="images/chassie_pink.png">Business pink</option>
+					<option value="images/chassie_black.png">Business black</option>
+				</select> <!-- / Front chassie -->
+
+				<label for="gen_input_light">Front light</label>
+				<select name="gen_input_light" ng-model="light">
+					<option value="images/light_yellow.png">Yellow light</option>
+					<option value="images/light_blue.png">Blue light</option>
+				</select> <!-- / Front Light -->
+
+				<label for="gen_input_front">Choose glass</label>
+				<select name="gen_input_front" ng-model="front">
+					<option value="images/window_dark.png">Dark glass</option>
+					<option value="images/window_light.png">Glass</option>
+				</select> <!-- / Front Light -->
+
+				<label for="gen_input_driver">Choose driver</label>
+				<select name="gen_input_driver" ng-model="driver">
+					<option value="images/driver_1.png">Kalle</option>
+					<option value="images/driver_2.png">Gunnar</option>
+				</select> <!-- / Front Light -->
+
+
+			</div> <!-- / .span2 -->
+
+			<div class="span9">
+				
+
+				<section id="generator">
+					<img id="generator_chassie" src="{{chassie}}" alt="">
+					<img id="generator_light" src="{{light}}" alt="">
+					<img id="generator_driver" src="{{driver}}" alt="">
+					<img id="generator_front" src="{{front}}" alt="">
+				</section> <!-- /generator -->
+
+			</div><!-- / .span8 -->
+			
+		
+		</div><!-- / generator controller -->
+
+	</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
