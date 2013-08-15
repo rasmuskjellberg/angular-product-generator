@@ -1,0 +1,2 @@
+angular-product-generator
+=========================
