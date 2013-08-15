@@ -1,2 +1,2 @@
-angular-product-generator
+#Angular Product Generator
 =========================
